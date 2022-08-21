@@ -210,3 +210,63 @@ VALUES
     '1977-04-30', -- DataNascimento - date
     1          -- CodStatus - int
     )
+
+CREATE TABLE TB_NotaAluno
+(CodNotaAluno INT IDENTITY (1,1),
+ CodAluno INT NOT NULL,
+ CodMateria INT  NOT NULL, 
+ Nota TINYINT NOT NULL,
+ CONSTRAINT PK_NotaAluno PRIMARY KEY (CodNotaAluno),
+ CONSTRAINT FK_NotaAulo FOREIGN KEY (CodAluno) REFERENCES dbo.TB_Aluno (CodAluno),
+ CONSTRAINT FK_NotaAlunoMateria FOREIGN KEY (CodMateria) REFERENCES dbo.TB_Materia (CodMateria)
+ )
+
+INSERT INTO dbo.TB_NotaAluno
+(
+    CodAluno,
+    CodMateria,
+    Nota
+)
+VALUES
+(   1, -- CodAluno - int
+    1, -- CodMateria - int
+    0  -- Nota - tinyint
+    )
+
+INSERT INTO dbo.TB_NotaAluno
+(
+    CodAluno,
+    CodMateria,
+    Nota
+)
+VALUES
+(   2, -- CodAluno - int
+    1, -- CodMateria - int
+    3  -- Nota - tinyint
+    )
+
+
+INSERT INTO dbo.TB_NotaAluno
+(
+    CodAluno,
+    CodMateria,
+    Nota
+)
+VALUES
+(   3, -- CodAluno - int
+    1, -- CodMateria - int
+    10  -- Nota - tinyint
+    )
+
+	
+INSERT INTO dbo.TB_NotaAluno
+(
+    CodAluno,
+    CodMateria,
+    Nota
+)
+VALUES
+(   4, -- CodAluno - int
+    1, -- CodMateria - int
+    7  -- Nota - tinyint
+    )
