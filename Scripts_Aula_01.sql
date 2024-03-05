@@ -1,5 +1,10 @@
 CREATE DATABASE Escola;
-
+GO
+	
+Use Escola
+	
+GO
+	
 IF OBJECT_ID(N'dbo.TB_Status', N'U') IS NOT NULL  
    DROP TABLE [dbo].[TB_Status];  
 
@@ -64,7 +69,7 @@ INSERT INTO dbo.TB_Materia
     CodStatus
 )
 VALUES
-(   'Português', -- Materia - varchar(150)
+(   'PortuguÃªs', -- Materia - varchar(150)
     1            -- CodStatus - int
     );
 INSERT INTO dbo.TB_Materia
@@ -73,7 +78,7 @@ INSERT INTO dbo.TB_Materia
     CodStatus
 )
 VALUES
-(   'Inglês', -- Materia - varchar(150)
+(   'InglÃªs', -- Materia - varchar(150)
     1         -- CodStatus - int
     );
 INSERT INTO dbo.TB_Materia
@@ -91,7 +96,7 @@ INSERT INTO dbo.TB_Materia
     CodStatus
 )
 VALUES
-(   'Ciências', -- Materia - varchar(150)
+(   'CiÃªncias', -- Materia - varchar(150)
     1           -- CodStatus - int
     );
 
@@ -126,7 +131,7 @@ VALUES
 
 DECLARE @codmateria INT =
         (
-            SELECT CodMateria FROM dbo.TB_Materia WHERE Materia = 'Ciências'
+            SELECT CodMateria FROM dbo.TB_Materia WHERE Materia = 'CiÃªncias'
         );
 
 INSERT INTO dbo.TB_Professor
@@ -205,7 +210,7 @@ VALUES
     CodStatus
 )
 VALUES
-(   'Pópis',        -- NomeAluno - varchar(150)
+(   'PÃ³pis',        -- NomeAluno - varchar(150)
     '2222',        -- RA - varchar(10)
     '1977-04-30', -- DataNascimento - date
     1          -- CodStatus - int
